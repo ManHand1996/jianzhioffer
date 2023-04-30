@@ -26,6 +26,13 @@
 0 <= m <= 1000
 
 答案:https://leetcode.cn/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/solutions/95306/mian-shi-ti-04-er-wei-shu-zu-zhong-de-cha-zhao-zuo/
+
+解题思路:
+有序矩阵判断给定值是否存在矩阵中.
+关键是有序,和寻找比较的端点
+本题为,左下角(第一列最大值)或右上角(第一行最大值)
+通过判断目标值与端点值,筛选出目标值不在那一行/列,从而缩小搜索范围(算法的目标提升执行效率)
+
 """
 class Solution(object):
     def findNumberIn2DArray(self, matrix, target):
@@ -69,3 +76,12 @@ class Solution(object):
             elif matrix[i][j] < target: j += 1
             else: return True
         return False
+
+6,1,2,3,4,5
+7,8,9,10,1,2,3,4,5,6,
+
+8,9,10,1,2,3,4,5,6,7,
+
+3,3,1
+
+12,11,10,9,8,7,6,5,4,3,2,1,
