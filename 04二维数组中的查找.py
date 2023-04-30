@@ -51,7 +51,7 @@ class Solution(object):
         #     i +=1
         # return False
 
-        # 3.逐渐减少搜索的矩阵大小 O(m+n)
+        # 3.逐渐减少搜索的矩阵大小 O(m+n) safs
         i, j = len(matrix) - 1, 0
         while i >= 0 and j < len(matrix[0]):
             if matrix[i][j] > target: i -= 1
