@@ -53,7 +53,16 @@ class Solution(object):
         #     i +=1
         # return False
 
-        # 3.逐渐减少搜索的矩阵大小 O(m+n) safs
+
+        """3.逐渐减少搜索的矩阵大小O(m+n)
+          由于行左到右是非递减, 列上至下非递减
+          利用该特性,将第一行或第一列的最大值作为flag(matrix[i][j])与target比较,进行行/列消除
+          以第一列最大值为flag:
+            若flag > target: 说明target不在该行,i--, 消除该行
+            若flag < target: 说明target不在该列,j++, 消除该列
+            若flag == target: 找到目标元素,直接返回True
+            当flag超出索引范围则找不到target,返回False
+        """
         i, j = len(matrix) - 1, 0
         while i >= 0 and j < len(matrix[0]):
             if matrix[i][j] > target: i -= 1
