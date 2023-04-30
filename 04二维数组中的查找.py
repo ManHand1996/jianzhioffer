@@ -24,6 +24,8 @@
 0 <= n <= 1000
 
 0 <= m <= 1000
+
+答案:https://leetcode.cn/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/solutions/95306/mian-shi-ti-04-er-wei-shu-zu-zhong-de-cha-zhao-zuo/
 """
 class Solution(object):
     def findNumberIn2DArray(self, matrix, target):
