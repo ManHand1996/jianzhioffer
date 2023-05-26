@@ -19,7 +19,7 @@ class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
-def reversePrint(self, head: ListNode) -> List[int]:
+def reversePrint(self, head: ListNode) -> list[int]:
         
         # l = []
         # 1.insert(0,val)
