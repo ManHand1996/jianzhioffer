@@ -110,3 +110,5 @@ def cuttingRope(self, n: int) -> int:
     if q == 0:return (rem*3) % k # 剩余一个3, 余数为0
     if q == 1: return (rem*4) % k # 剩余一个3, 余数为1, 最大乘积应为2*2
     return rem*6 % k # 剩余一个3, 余数2 最大乘积为 2*3
+
+    
