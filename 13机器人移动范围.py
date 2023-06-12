@@ -1,5 +1,5 @@
 """
-难度:中
+难度:中等(动态规划)
 """
 
 def movingCount(self, m: int, n: int, k: int) -> int:
