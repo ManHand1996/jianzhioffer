@@ -14,16 +14,15 @@ def pathSum(root: TreeNode, target: int) -> list[list[int]]:
         return []
 
     res = []
-    def recurse(node, s):
+    def recurse(node, path):
         
         if not node.left and not node.right:
-            if sum(s) == target:
-                res.append(s)
-                return s
-            else:
-                return []
-        left = recurse(node.left, s+[node.left.val]) if node.left else []
-        right = recurse(node.right, s+[node.right.val]) if node.right else []
+            if sum(path) == target:
+                res.append(path)
+                return path
+            return
+        if node.left: recurse(node.left, path+[node.left.val]) 
+        if node.right: recurse(node.right, path+[node.right.val]) 
         return
 
     recurse(root, [root.val])
